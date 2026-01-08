@@ -39,7 +39,7 @@ window.onload = function () {
             sessionStorage.setItem("savedName", name.value);
 
             alert("환영합니다. 회원가입이 완료되었습니다!");
-            location.href = "test.html";
+            location.href = "index.html";
         }
     }
 }
