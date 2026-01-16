@@ -1,0 +1,24 @@
+# Maven 빌드 결과
+target/
+*.jar
+*.war
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# 컴파일 결과
+*.class
+.classpath
+.project
+.settings/
+
+# 기타
+logs/
+*.log
+*.iml
+
