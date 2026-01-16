@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#a1 {
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(to right, gold, silver);
+}
+
+#a2 {
+    left: 200px;
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(to right, white, blue);
+}
+
+#a3 {
+    left: 400px;
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(to right, skyblue, purple);
+}
+
+#a4 {
+    left: 600px;
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(to right, violet, green);
+}
+
+#a5 {
+    left: 800px;
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(95, 173, 95), red);
+}
+
+#a6 {
+    left: 1000px;
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(245, 105, 105), yellow);
+}
+
+#a7 {
+    left: 1200px;
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(255, 255, 108), rgb(202, 0, 202));
+}

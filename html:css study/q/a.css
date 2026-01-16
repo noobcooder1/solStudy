@@ -1,0 +1,26 @@
+tr,
+td {
+    border-style: dashed;
+    border-width: 10px;
+    border-color: gold;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#special_bj {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 50px;
+    border: 5px solid gold;
+    outline: 5px solid silver;
+    outline-offset: 0px;
+}
+
+.hi {
+    color: blue;
+}

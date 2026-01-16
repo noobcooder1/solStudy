@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #202124;
+            color: #e8eaed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 헤더 영역 */
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 15px;
+        }
+
+        header a {
+            color: #e8eaed;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .apps-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: repeat(3, 6px);
+            grid-template-rows: repeat(3, 6px);
+            gap: 2px;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .apps-icon:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .apps-icon span {
+            width: 6px;
+            height: 6px;
+            background-color: #e8eaed;
+            border-radius: 50%;
+        }
+
+        /* 메인 콘텐츠 */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 100px;
+        }
+
+        /* 구글 로고 */
+        .logo {
+            font-size: 92px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            font-family: 'Product Sans', Arial, sans-serif;
+        }
+
+        .logo .g1 {
+            color: #4285f4;
+        }
+
+        .logo .o1 {
+            color: #ea4335;
+        }
+
+        .logo .o2 {
+            color: #fbbc05;
+        }
+
+        .logo .g2 {
+            color: #4285f4;
+        }
+
+        .logo .l {
+            color: #34a853;
+        }
+
+        .logo .e {
+            color: #ea4335;
+        }
+
+        /* 검색창 */
+        .search-container {
+            width: 100%;
+            max-width: 584px;
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #303134;
+            border-radius: 24px;
+            padding: 12px 16px;
+            border: 1px solid #5f6368;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        .search-box:hover,
+        .search-box:focus-within {
+            background-color: #303134;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            border-color: transparent;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+        }
+
+        .search-icon svg {
+            fill: #9aa0a6;
+        }
+
+        .search-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #e8eaed;
+            font-size: 16px;
+        }
+
+        .search-input::placeholder {
+            color: #9aa0a6;
+        }
+
+        .search-tools {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tool-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tool-icon:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .tool-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: #9aa0a6;
+        }
+
+        .ai-mode {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background-color: rgba(138, 180, 248, 0.1);
+            padding: 6px 12px;
+            border-radius: 16px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #8ab4f8;
+        }
+
+        .ai-mode:hover {
+            background-color: rgba(138, 180, 248, 0.2);
+        }
+
+        /* 버튼 */
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #303134;
+            border: 1px solid #303134;
+            color: #e8eaed;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            border-color: #5f6368;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 언어 설정 */
+        .language {
+            font-size: 13px;
+            color: #9aa0a6;
+        }
+
+        .language a {
+            color: #8ab4f8;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        .language a:hover {
+            text-decoration: underline;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: #171717;
+            border-top: 1px solid #303134;
+        }
+
+        .footer-top,
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+        }
+
+        .footer-top {
+            border-bottom: 1px solid #303134;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #9aa0a6;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <a href="#">Gmail</a>
+        <a href="#">이미지</a>
+        <div class="apps-icon">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        <!-- 구글 로고 -->
+        <div class="logo">
+            <span class="g1">G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span
+                class="l">l</span><span class="e">e</span>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="search-container">
+            <div class="search-box">
+                <div class="search-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                    </svg>
+                </div>
+                <input type="text" class="search-input" placeholder="">
+                <div class="search-tools">
+                    <div class="tool-icon" title="키보드">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z" />
+                        </svg>
+                    </div>
+                    <div class="tool-icon" title="음성 검색">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z" />
+                        </svg>
+                    </div>
+                    <div class="tool-icon" title="이미지로 검색">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21.53 4.306v15.363H2.47V4.306h19.06m.706-1.765H1.765v18.892h20.47V2.541z" />
+                            <path d="M18.588 15.363L14 9.647l-3.412 4.353-2.118-2.706L5.412 15.363z" />
+                            <circle cx="8" cy="8" r="1.5" />
+                        </svg>
+                    </div>
+                    <div class="ai-mode">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L9.5 8.5 2 12l7.5 3.5L12 22l2.5-6.5L22 12l-7.5-3.5z" />
+                        </svg>
+                        AI 모드
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 유튜브 영상 -->
+        <div class="youtube-container" style="margin: 25px 0;">
+            <iframe width="711" height="400" src="https://www.youtube.com/embed/zHYfce7Mo14"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen style="border-radius: 12px;">
+            </iframe>
+        </div>
+
+        <!-- 버튼 -->
+        <div class="buttons">
+            <button class="btn">Google 검색</button>
+            <button class="btn">I'm Feeling Lucky</button>
+        </div>
+
+        <!-- 언어 설정 -->
+        <div class="language">
+            Google 지원 언어: <a href="#">English</a>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-links">
+                <a href="#">Google 정보</a>
+                <a href="#">광고</a>
+                <a href="#">비즈니스</a>
+                <a href="#">검색의 원리</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div></div>
+            <div class="footer-links">
+                <a href="#">개인정보처리방침</a>
+                <a href="#">약관</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="index.js"></script>
+</body>
+
+</html>

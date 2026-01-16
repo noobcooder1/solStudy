@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    width: 100vh;
+    height: 100vh;
+
+    background-image: url('미라클국밥.png');
+    background-repeat: no-repeat;
+
+    /* background-position: left; */
+    /* background-position: right; */
+    /* background-position: top; */
+    /* background-position: bottom; */
+    /* background-position: center; */
+    background-position: center center;
+
+    /* background-size: auto; */
+    /* background-size: cover; */
+    /* background-size: contain; */
+
+    background-size: cover;
+    /*cover는 비율을 맞춤*/
+    /* background-size: 100% 100%; */
+    /*100% 100%는 원본 비율무시하고채우기 가능*/
+}

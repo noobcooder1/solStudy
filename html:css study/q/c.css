@@ -1,0 +1,39 @@
+#bj {
+    width: 350px;
+    height: 500px;
+    padding: 10px;
+    border: 10px solid blueviolet;
+    margin: 5px;
+    vertical-align: top;
+}
+
+#드래곤 {
+    height: 300px;
+    width: 400px;
+    border-width: 20px 15px 20px 15px;
+    border-color: violet;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    vertical-align: top;
+}
+
+video {
+    vertical-align: top;
+    width: 450px;
+    height: 300px;
+    margin: 5px;
+    padding: 10px;
+    border: 10px solid violet;
+}
+
+.hi {
+    display: flex;
+    color: gold;
+    background-color: violet;
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}

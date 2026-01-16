@@ -1,0 +1,44 @@
+/* * { color: pink; background-color: gray; } */
+/* 
+h1 {
+    background: red;
+    width: 100px;
+
+    /* transition-property: width, background-color;
+
+    transition-property: width, background-color;
+    transition-duration: 1s;
+}  */
+
+/* div {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 100px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+} */
+
+
+div {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 1000px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}

@@ -1,0 +1,60 @@
+/* * { color: pink; background-color: gray; } */
+
+h1 {
+    background: red;
+    width: 100px;
+
+    /* transition-property: width, background-color; */
+
+
+    transition-property: width, background-color;
+    transition-duration: 1s;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    flex: 20%;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    flex: 10%;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    flex: 30%;
+}
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    flex: 25%;
+}
+
+.box5 {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    flex: 15%;
+}
+
+h1:hover {
+
+    background-color: blue;
+
+    width: 400px;
+}

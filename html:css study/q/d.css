@@ -1,0 +1,53 @@
+.bj {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: 10px solid blueviolet;
+    border-radius: 20px;
+    margin: 5px;
+    vertical-align: top;
+}
+
+.드래곤 {
+    height: 300px;
+    width: 300px;
+    border: 10px solid blueviolet;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.몬스터 {
+    height: 300px;
+    width: 300px;
+    border: 10px solid blueviolet;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    vertical-align: top;
+}
+
+video {
+    width: 300px;
+    height: 300px;
+    border: 10px solid blueviolet;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+}
+
+#p1 {
+    background-color: red;
+    width: 500px;
+}
+
+#p2 {
+    background-color: green;
+    width: 500px;
+}
+
+#p3 {
+    background-color: blue;
+    width: 500px;
+}
