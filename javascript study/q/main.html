@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>가위바위보게임</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h2>🎮 가위바위보 게임</h2>
+    <input id="rpc_input_text" type="text" placeholder="가위,바위,보 입력">
+    <input id="rpc_input_button" type="button" value="누르세요" onclick="rpcInputButtonClick();">
+
+    <h3>📊 결과:</h3>
+    <div id="d" style="min-height: 100px; padding: 10px; border: 1px solid #ccc; background: white;"></div>
+
+    <!-- script는 HTML 요소들보다 아래에 배치 -->
+    <script src="common.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

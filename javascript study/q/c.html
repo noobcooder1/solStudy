@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>여러개</title>
+    <link rel="stylesheet" href="c.css">
+</head>
+
+<body>
+    <div id="cat"></div>
+    <script>
+        function cat() {
+            let cat = "c"
+            let age = "10"
+            let color = "black"
+            let sum = age + color + cat;
+            return sum;
+        }
+
+        document.getElementById("cat").innerHTML += cat();
+
+        function ranintfor() {
+            let out = "";
+            let ranint = Math.floor(Math.random() * 10) + 1;
+            for (let i = 0; i < 10; i++) {
+                if (i == ranint) {
+                    continue;
+                }
+                out += i;
+            }
+            return out;
+        }
+        document.getElementById("cat").innerHTML += "<br>" + ranintfor();
+    </script>
+</body>
+
+</html>

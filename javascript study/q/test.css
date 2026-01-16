@@ -1,0 +1,29 @@
+#hi {
+    background-color: gold;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 5px 5px 10px 20px black;
+}
+
+#title {
+    text-align: center;
+    font-size: 50px;
+    color: blueviolet;
+    background-color: aquamarine;
+    width: 100vw;
+    height: 100px;
+    z-index: 10;
+}
+
+label {
+    color: silver;
+    font-size: 20px;
+}
+
+#hello {
+    color: silver;
+    font-size: 20px;
+}

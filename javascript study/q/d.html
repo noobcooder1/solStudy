@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트</title>
+    <link rel="stylesheet" href="c.css">
+</head>
+
+<body>
+    <div id="d"></div>
+    <script>
+        document.getElementById("d").innerHTML += `
+        <form action="">
+            <input type="text" id="ex1" minlength="8" maxlength="16" required pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+{}|:]).+$">
+            <button type="submit">전송1</button><br><br>
+            <input type="text" id="ex2" minlength="8" maxlength="16" required pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+{}|:]).+$">
+            <button type="submit">전송2</button><br><br>
+            <input type="text" id="ex3" minlength="8" maxlength="16" required pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+{}|:]).+$">
+            <button type="submit">전송3</button><br><br>
+            <input type="text" id="ex4" minlength="8" maxlength="16" required pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+{}|:]).+$">
+            <button type="submit">전송4</button><br><br>
+            <input type="text" id="ex5" minlength="8" maxlength="16" required pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+{}|:]).+$">
+            <button type="submit">전송5</button><br><br>
+        </form>`;
+    </script>
+</body>
+
+</html>

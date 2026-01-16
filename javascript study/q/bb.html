@@ -1,0 +1,14 @@
+<div id="hello"></div>
+<script>
+    const totalCols = 9;
+    let out = "";
+
+    for (let i = 1; i < 10; i++) {
+        const stars = i;
+        const spaces = totalCols - stars;
+
+        out += "&nbsp;".repeat(spaces) + "*".repeat(stars) + "<br>";
+    }
+
+    document.getElementById("hello").innerHTML = out;
+</script>
